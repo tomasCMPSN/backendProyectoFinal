@@ -48,7 +48,7 @@ pacienteCtrl.obtenerPaciente = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(404).json({
-      mensaje: "No se pudo obtener el producto buscado",
+      mensaje: "No se pudo obtener al paciente buscado",
     });
   }
 };
@@ -57,12 +57,12 @@ pacienteCtrl.editarPaciente = async (req, res) => {
   try {
     await Paciente.findByIdAndUpdate(req.params.id, req.body);
     res.status(200).json({
-      mensaje: "Turno modificado correctamente",
+      mensaje: "Paciente modificado correctamente",
     });
   } catch (error) {
     console.log(error);
     res.status(404).json({
-      mensaje: "Error al intentar modificar el turno",
+      mensaje: "Error al intentar modificar al paciente",
     });
   }
 };
@@ -71,12 +71,12 @@ pacienteCtrl.borrarPaciente = async (req, res) => {
     try {
       await Paciente.findByIdAndDelete(req.params.id);
       res.status(200).json({
-          mensaje: "Turno eliminado correctamente"
+          mensaje: "Paciente eliminado correctamente"
       })
     } catch (error) {
       console.log(error);
       res.status(404).json({
-        mensaje: "Error al intentar borrar el turno",
+        mensaje: "Error al intentar borrar al paciente",
       });
     }
   };
