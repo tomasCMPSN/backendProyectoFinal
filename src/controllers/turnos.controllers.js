@@ -1,4 +1,9 @@
 import Turno from "../models/turno";
+import {
+  validateNames,
+  validateVet,
+  validateDate,
+} from "../helpers/ValidateForms";
 const turnoCtrl = {};
 
 turnoCtrl.listarTurnos = async (req, res) => {
@@ -17,11 +22,17 @@ turnoCtrl.crearTurno = async (req, res) => {
   try {
     console.log(req.body);
     // VALIDACION
+    if (!validateNames(req.body.petName) || !validateVet(req.body.vet) || !validateDate(req.body.date)) {
+      res.status(404).json({
+        mensaje: "Error al validar",
+      })
+      return;
+    }
     const turnoNuevo = new Turno({
       petName: req.body.petName,
       vet: req.body.vet,
       date: req.body.date,
-      time: req.body.time
+      time: req.body.time,
     });
     await turnoNuevo.save();
     res.status(201).json({
@@ -66,8 +77,8 @@ turnoCtrl.borrarTurno = async (req, res) => {
   try {
     await Turno.findByIdAndDelete(req.params.id);
     res.status(200).json({
-        mensaje: "Turno eliminado correctamente"
-    })
+      mensaje: "Turno eliminado correctamente",
+    });
   } catch (error) {
     console.log(error);
     res.status(404).json({

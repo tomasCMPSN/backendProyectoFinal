@@ -28,6 +28,8 @@ export const validateVet = (campo) => {
   }
 };
 
+
+
 export const validateEmail = (campo)=>{
   if(regExp4Email.test(campo)){
     return true
@@ -35,17 +37,29 @@ export const validateEmail = (campo)=>{
     return false
   }
 }
+// let date = new Date();
+// let output = String( date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' +date.getDate()).padStart(2, '0');
 
-let date = new Date();
-let output = String( date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' +date.getDate()).padStart(2, '0');
+
+// let date = new Date();
+// let output = date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()
+
+let date = new Date()
+let output = date.getFullYear()+ '-'+ `${(date.getMonth()+1)}`.padStart(2,'0') + '-' + `${(date.getDate())}`.padStart(2,'0') 
+
+
 
 export const validateDate =(campo)=>{
+  console.log(output)
+  console.log(campo)
   if(campo > output){
   return true
   }else{
     return false
   }
 }
+
+
 
 export const validateNumber= (campo)=>{
   if(regExp4Number.test(campo)&& campo.length<13){
@@ -64,6 +78,11 @@ export const validatePaciente = (field) => {
   }
 };
 
+
+
+
+
+
 export const validateMesage = (campo)=>{
   if (campo.length < 300 && campo.length > 0){
     return true
@@ -71,3 +90,5 @@ export const validateMesage = (campo)=>{
     return false
   }
 }
+
+

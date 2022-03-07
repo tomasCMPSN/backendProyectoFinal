@@ -1,4 +1,9 @@
 import Paciente from "../models/paciente";
+import {
+  validateEmail,
+  validateNumber,
+  validatePaciente,
+} from "../helpers/ValidateForms";
 const pacienteCtrl = {};
 
 pacienteCtrl.listarPacientes = async (req, res) => {
@@ -17,6 +22,21 @@ pacienteCtrl.crearPaciente = async (req, res) => {
   try {
     console.log(req.body);
     // VALIDACION
+    if (
+      !validatePaciente(req.body.paciente) ||
+      !validatePaciente(req.body.especie) ||
+      !validatePaciente(req.body.raza) ||
+      !validatePaciente(req.body.duenio) ||
+      !validateEmail(req.body.email) ||
+      !validateNumber(req.body.peso) ||
+      !validateNumber(req.body.telefono) || !validateNumber(req.body.dni) ||
+      !validateNumber(req.body.edad)
+    ) {
+      res.status(404).json({
+        mensaje: "Error al validar",
+      })
+      return;
+    }
     const pacienteNuevo = new Paciente({
       paciente: req.body.paciente,
       especie: req.body.especie,
