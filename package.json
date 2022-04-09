@@ -8,6 +8,7 @@
     "fs": "^0.0.1-security",
     "mongoose": "^6.2.3",
     "morgan": "^1.10.0",
+    "os": "^0.1.2",
     "path": "^0.12.7",
     "react-scripts": "^5.0.0",
     "serve": "^13.0.2"
