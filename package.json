@@ -23,6 +23,11 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "author": "Tomas Campusano",
   "license": "ISC",
   "description": "Backend veterinaria grupo 2"
