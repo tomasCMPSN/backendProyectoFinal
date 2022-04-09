@@ -28,7 +28,9 @@
   "browser": {
     "fs": false,
     "path": false,
-    "os": false
+    "os": false,
+    "http": false,
+    "https": false
   },
   "author": "Tomas Campusano",
   "license": "ISC",
