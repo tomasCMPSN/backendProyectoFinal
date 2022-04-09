@@ -21,5 +21,6 @@
   },
   "author": "Tomas Campusano",
   "license": "ISC",
-  "description": "Backend veterinaria grupo 2"
+  "description": "Backend veterinaria grupo 2",
+  "engines": { "node": "16.14.2" }
 }
