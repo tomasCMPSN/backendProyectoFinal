@@ -7,6 +7,7 @@
     "express": "^4.17.3",
     "mongoose": "^6.2.3",
     "morgan": "^1.10.0",
+    "react-scripts": "^5.0.0",
     "serve": "^13.0.2"
   },
   "name": "backendproyectofinal",
@@ -21,6 +22,5 @@
   },
   "author": "Tomas Campusano",
   "license": "ISC",
-  "description": "Backend veterinaria grupo 2",
-  "engines": { "node": "16.14.2" }
+  "description": "Backend veterinaria grupo 2"
 }
