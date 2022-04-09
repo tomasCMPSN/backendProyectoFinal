@@ -16,8 +16,8 @@
     "start": "babel-node src/index.js",
     "babel-node": "babel-node --presets=env",
     "dev": "nodemon --exec npm run babel-node ./src/index.js",
-    "heroku-postbuild": "npm run build",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Tomas Campusano",
   "license": "ISC",
