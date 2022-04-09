@@ -16,7 +16,11 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "babel-node": "babel-node --presets=env",
-    "dev": "nodemon --exec npm run babel-node ./src/index.js"
+    "dev": "nodemon --exec npm run babel-node ./src/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Tomas Campusano",
   "license": "ISC",
