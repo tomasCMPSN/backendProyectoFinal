@@ -14,7 +14,8 @@
     "path": "^0.12.7",
     "react-scripts": "^4.0.3",
     "serve": "^13.0.2",
-    "stream-http": "^3.2.0"
+    "stream-http": "^3.2.0",
+    "webpack": "^4.44.2"
   },
   "name": "backendproyectofinal",
   "version": "1.0.0",
@@ -26,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "webpack -p"
   },
   "author": "Tomas Campusano",
   "license": "ISC",
