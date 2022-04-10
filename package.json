@@ -20,6 +20,9 @@
   "name": "backendproyectofinal",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "12.11.1"
+  },
   "scripts": {
     "start": "babel-node src/index.js",
     "babel-node": "babel-node --presets=env",
