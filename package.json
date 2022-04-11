@@ -3,19 +3,9 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "fs": "^0.0.1-security",
-    "http-browserify": "^1.7.0",
-    "https-browserify": "^1.0.0",
     "mongoose": "^6.2.3",
-    "morgan": "^1.10.0",
-    "os": "^0.1.2",
-    "path": "^0.12.7",
-    "react-scripts": "^4.0.3",
-    "serve": "^13.0.2",
-    "stream-http": "^3.2.0",
-    "webpack": "^4.44.2"
+    "morgan": "^1.10.0"
   },
   "name": "backendproyectofinal",
   "version": "1.0.0",
@@ -23,17 +13,9 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "babel-node": "babel-node --presets=env",
-    "dev": "nodemon --exec npm run babel-node ./src/index.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "webpack -p"
+    "dev": "nodemon --exec npm run babel-node ./src/index.js"
   },
   "author": "Tomas Campusano",
   "license": "ISC",
-  "description": "Backend veterinaria grupo 2",
-  "private": "true",
-  "engines": {
-    "node": "16.13.1"
-  }
+  "description": "Backend veterinaria grupo 2"
 }
