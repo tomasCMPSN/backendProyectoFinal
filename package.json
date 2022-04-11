@@ -20,9 +20,6 @@
   "name": "backendproyectofinal",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "12.11.1"
-  },
   "scripts": {
     "start": "babel-node src/index.js",
     "babel-node": "babel-node --presets=env",
@@ -35,5 +32,8 @@
   "author": "Tomas Campusano",
   "license": "ISC",
   "description": "Backend veterinaria grupo 2",
-  "private": "true"
+  "private": "true",
+  "engines": {
+    "node": "16.13.1"
+  }
 }
