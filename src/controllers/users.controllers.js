@@ -35,7 +35,7 @@ userCtrl.crearUsuario = async(req,res)=>{
 
         const usuarioNuevo = new User ({
             email: req.body.email,
-            password:req.body.password,
+            password: await bcrypt.hash(req.body.password, 10),
         });
 
         await usuarioNuevo.save();
