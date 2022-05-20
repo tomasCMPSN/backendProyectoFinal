@@ -62,8 +62,6 @@ let output = date.getFullYear()+ '-'+ `${(date.getMonth()+1)}`.padStart(2,'0') +
 
 
 export const validateDate =(campo)=>{
-  console.log(output)
-  console.log(campo)
   if(campo > output){
   return true
   }else{

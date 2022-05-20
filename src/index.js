@@ -11,10 +11,6 @@ const app = express();
 
 app.set('port', process.env.PORT || 4000);
 
-app.listen(app.get('port'), () => {
-    console.log('puerto '+ app.get('port'));
-});
-
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());

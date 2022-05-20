@@ -8,21 +8,13 @@ import {
 const userCtrl={};
 
 userCtrl.listarUsuario = async(req,res)=>{
-    try{
         const listarUsuario = await User.find();
         res.status(200).json(listarUsuario);
-    }catch(error){
-        console.log(error);
-        res.status(404).json({
-            mensaje: "Error al listar los usuarios"
-        })
-    }
 }
 
 // Metodo para crear
 
 userCtrl.crearUsuario = async(req,res)=>{
-    try {
         // validaciones
         if(!validateEmail(req.body.email)|| !validatePassword(req.body.password)){
             res.status(404).json({
@@ -42,16 +34,6 @@ userCtrl.crearUsuario = async(req,res)=>{
         res.status(201).json({
             mensaje: "El usuario se ha creado con exito"
         })
-
-
-
-    } catch (error) {
-        console.log(error);
-        res.status(404).json({
-            mensaje: "Error al intentar crear el usuario"
-        })
-        
-    }
 }
 
 export default userCtrl;
